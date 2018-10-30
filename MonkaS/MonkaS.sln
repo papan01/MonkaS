@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkaS", "MonkaS\MonkaS.csproj", "{2A82292E-9C2C-4592-9ED8-33CD39E4CA2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkaS.Core", "MonkaS.Core\MonkaS.Core.csproj", "{9B7434D6-1E79-4ED7-A918-E378D0C5E047}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A82292E-9C2C-4592-9ED8-33CD39E4CA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A82292E-9C2C-4592-9ED8-33CD39E4CA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A82292E-9C2C-4592-9ED8-33CD39E4CA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A82292E-9C2C-4592-9ED8-33CD39E4CA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B7434D6-1E79-4ED7-A918-E378D0C5E047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B7434D6-1E79-4ED7-A918-E378D0C5E047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B7434D6-1E79-4ED7-A918-E378D0C5E047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B7434D6-1E79-4ED7-A918-E378D0C5E047}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A51DF49-9F0C-4F00-80AF-056962559437}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+C:\Louis\C#\MonkaS\MonkaS\MonkaS.Core\bin\Debug\MonkaS.Core.dll
+C:\Louis\C#\MonkaS\MonkaS\MonkaS.Core\bin\Debug\MonkaS.Core.pdb
+C:\Louis\C#\MonkaS\MonkaS\MonkaS.Core\obj\Debug\MonkaS.Core.csprojAssemblyReference.cache
+C:\Louis\C#\MonkaS\MonkaS\MonkaS.Core\obj\Debug\MonkaS.Core.csproj.CoreCompileInputs.cache
+C:\Louis\C#\MonkaS\MonkaS\MonkaS.Core\obj\Debug\MonkaS.Core.dll
+C:\Louis\C#\MonkaS\MonkaS\MonkaS.Core\obj\Debug\MonkaS.Core.pdb
+C:\Louis\C#\MonkaS\MonkaS\MonkaS.Core\bin\Debug\Ninject.dll
+C:\Louis\C#\MonkaS\MonkaS\MonkaS.Core\bin\Debug\Ninject.xml
+C:\Louis\C#\MonkaS\MonkaS\MonkaS.Core\obj\Debug\MonkaS.Core.csproj.CopyComplete

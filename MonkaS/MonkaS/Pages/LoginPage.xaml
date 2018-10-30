@@ -1,0 +1,63 @@
+﻿<local:BasePage x:TypeArguments="vm:LoginViewModel" x:Class="MonkaS.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:vm="clr-namespace:MonkaS.Core.ViewModel;assembly=MonkaS.Core"
+      xmlns:ap="clr-namespace:MonkaS.AttachedProperties"
+      xmlns:local="clr-namespace:MonkaS.Pages"
+      mc:Ignorable="d"
+      x:Name="loginPage"
+      Title="LoginPage">
+
+    <Border>
+        <Grid>
+            <!-- Main content scroll -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <StackPanel 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    TextBlock.TextAlignment="Center">
+
+                    <!-- Login main content white box -->
+                    <Border Background="{StaticResource DarkBackgroundBrush}" 
+                            CornerRadius="10"
+                            Padding="15 50 15 15"
+                            Width="330"
+                            Margin="50 50 50 0">
+
+                        <StackPanel>
+
+                            <!-- Sign In header -->
+                            <TextBlock Text="Sign In" 
+                                   FontSize="{StaticResource FontSizeXXLarge}"                            
+                                   Foreground="{StaticResource OrangeA700Brush}" 
+                                   Margin="0,0,0,10"/>
+
+                            <!-- Sign In subtext-->
+                            <TextBlock Text="It's about to get fun" 
+                                       FontSize="{StaticResource FontSizeLarge}"
+                                       Foreground="{StaticResource Gray400Brush}"
+                                       Margin="0 0 0 20"/>
+
+                            <!-- Email -->
+                            <TextBox Text="{Binding Email}" Tag="Email" />
+
+                            <!-- Password -->
+                            <PasswordBox x:Name="PasswordText" Tag="Password" Margin="0 0 0 30" />
+
+                            <!-- Next button -->
+                            <Button Content="Login" HorizontalAlignment="Center" 
+                                    ap:IsBusyProperty.Value="{Binding LoginIsRunning}"
+                                    Command="{Binding LoginCommand}"
+                                    CommandParameter="{Binding ElementName=loginPage}"/>
+
+                        </StackPanel>
+                    </Border>
+
+                    <Button Style="{StaticResource TextButton}" Content="Or, create a free account..." Command="{Binding RegisterCommand}" HorizontalAlignment="Center" />
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</local:BasePage>
