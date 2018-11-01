@@ -1,12 +1,14 @@
 ﻿using MonkaS.Animation;
 using MonkaS.Core.ViewModel.Base;
+using System.ComponentModel;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 
 namespace MonkaS.Pages
 {
-    public class BasePage : Page
+    public class BasePage : UserControl
     {
         #region Public Properties
         /// <summary>
@@ -37,6 +39,10 @@ namespace MonkaS.Pages
         /// </summary>
         public BasePage()
         {
+            // Don't bother animating in design time
+            if (DesignerProperties.GetIsInDesignMode(this))
+                return;
+
             // If we are animating in, hide to begin with
             if (PageLoadAnimation != PageAnimation.None)
                 Visibility = System.Windows.Visibility.Collapsed;
@@ -80,8 +86,7 @@ namespace MonkaS.Pages
                 case PageAnimation.SlideAndFadeInFromRight:
 
                     // Start the animation
-                    await this.SlideAndFadeInFromRight(seconds: SlideSeconds);
-
+                    await this.SlideAndFadeInFromRightAsync(seconds: SlideSeconds, width: (int)Application.Current.MainWindow.Width);
                     break;
             }
         }
@@ -101,7 +106,7 @@ namespace MonkaS.Pages
                 case PageAnimation.SlideAndFadeOutToLeft:
 
                     // Start the animation
-                    await this.SlideAndFadeOutToLeft(SlideSeconds);
+                    await this.SlideAndFadeOutToLeftAsync(SlideSeconds, width: (int)Application.Current.MainWindow.Width);
 
                     break;
             }

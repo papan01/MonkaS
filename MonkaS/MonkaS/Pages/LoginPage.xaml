@@ -7,8 +7,7 @@
       xmlns:ap="clr-namespace:MonkaS.AttachedProperties"
       xmlns:local="clr-namespace:MonkaS.Pages"
       mc:Ignorable="d"
-      x:Name="loginPage"
-      Title="LoginPage">
+      x:Name="loginPage">
 
     <Border>
         <Grid>
@@ -41,13 +40,14 @@
                                        Margin="0 0 0 20"/>
 
                             <!-- Email -->
-                            <TextBox Text="{Binding Email}" Tag="Email" />
+                            <TextBox ap:IsFocusedProperty.Value="True" Text="{Binding Email}" Tag="Email" />
 
                             <!-- Password -->
                             <PasswordBox x:Name="PasswordText" Tag="Password" Margin="0 0 0 30" />
 
                             <!-- Next button -->
-                            <Button Content="Login" HorizontalAlignment="Center" 
+                            <Button Content="Login" HorizontalAlignment="Center"
+                                    IsDefault="True"
                                     ap:IsBusyProperty.Value="{Binding LoginIsRunning}"
                                     Command="{Binding LoginCommand}"
                                     CommandParameter="{Binding ElementName=loginPage}"/>

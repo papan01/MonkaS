@@ -19,7 +19,9 @@
     <Color x:Key="LimeA400" po:Freeze="True">#DDC6FF00</Color>
     <Color x:Key="OrangeA700" po:Freeze="True">#DDFF6D00</Color>
     <Color x:Key="Gray400" po:Freeze="True">#DDBDBDBD</Color>
+    <Color x:Key="Gray600" po:Freeze="True">#DD757575</Color>
     <Color x:Key="Gray900" po:Freeze="True">#DD212121</Color>
+    <Color x:Key="BlueGray900" po:Freeze="True">#DD263238</Color>
     <Color x:Key="RedA700" po:Freeze="True">#DDD50000</Color>
     <Color x:Key="GreenA700" po:Freeze="True">#DD00C853</Color>
     <Color x:Key="BlueA700" po:Freeze="True">#DD2962FF</Color>
@@ -28,7 +30,9 @@
     <SolidColorBrush x:Key="LimeA400Brush" Color="{StaticResource LimeA400}"/>
     <SolidColorBrush x:Key="OrangeA700Brush" Color="{StaticResource OrangeA700}"/>
     <SolidColorBrush x:Key="Gray400Brush" Color="{StaticResource Gray400}"/>
+    <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
+    <SolidColorBrush x:Key="BlueGray900Brush" Color="{StaticResource BlueGray900}"/>
     <SolidColorBrush x:Key="RedA700Brush" Color="{StaticResource RedA700}"/>
     <SolidColorBrush x:Key="GreenA700Brush" Color="{StaticResource GreenA700}"/>
     <SolidColorBrush x:Key="BlueA700Brush" Color="{StaticResource BlueA700}"/>

@@ -68,11 +68,18 @@
     <Compile Include="AttachedProperties\FrameworkElementAnimationAttachedProperties.cs" />
     <Compile Include="AttachedProperties\NoFrameHistory.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
-    <Compile Include="Controls\Chat\ChatListControl.xaml.cs">
+    <Compile Include="AttachedProperties\TextAttachedProperties.cs" />
+    <Compile Include="Controls\Chat\ChatList\ChatListControl.xaml.cs">
       <DependentUpon>ChatListControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Chat\ChatListItemControl.xaml.cs">
+    <Compile Include="Controls\Chat\ChatList\ChatListItemControl.xaml.cs">
       <DependentUpon>ChatListItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Chat\ChatMessageList\ChatMessageListControl.xaml.cs">
+      <DependentUpon>ChatMessageListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Chat\ChatMessageList\ChatMessageListItemControl.xaml.cs">
+      <DependentUpon>ChatMessageListItemControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\PageHost.xaml.cs">
       <DependentUpon>PageHost.xaml</DependentUpon>
@@ -83,7 +90,11 @@
     <Compile Include="Converter\ApplicationPageValueConverter.cs" />
     <Compile Include="Converter\BaseValueConverter.cs" />
     <Compile Include="Converter\BoolenToVisibilityConverter.cs" />
+    <Compile Include="Converter\SentByMeToAlignmentConverter.cs" />
+    <Compile Include="Converter\SentByMeToBackgroundConverter.cs" />
     <Compile Include="Converter\StringRGBToBrushConverter.cs" />
+    <Compile Include="Converter\TimeToDisplayTimeConverter.cs" />
+    <Compile Include="Converter\TimeToReadTimeConverter.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\ChatPage.xaml.cs">
       <DependentUpon>ChatPage.xaml</DependentUpon>
@@ -97,11 +108,19 @@
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="Window\WindowResizer.cs" />
-    <Page Include="Controls\Chat\ChatListControl.xaml">
+    <Page Include="Controls\Chat\ChatList\ChatListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Chat\ChatListItemControl.xaml">
+    <Page Include="Controls\Chat\ChatList\ChatListItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Chat\ChatMessageList\ChatMessageListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Chat\ChatMessageList\ChatMessageListItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\PasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Scroll.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -224,5 +247,6 @@
       <Name>MonkaS.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

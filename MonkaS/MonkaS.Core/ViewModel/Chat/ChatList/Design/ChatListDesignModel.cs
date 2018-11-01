@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MonkaS.Core.ViewModel.Chat.Design
+namespace MonkaS.Core.ViewModel.Chat.ChatList.Design
 {
     public class ChatListDesignModel : ChatListViewModel
     {

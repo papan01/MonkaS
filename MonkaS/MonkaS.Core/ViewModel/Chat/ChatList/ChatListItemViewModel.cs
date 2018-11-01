@@ -1,6 +1,6 @@
 ﻿using MonkaS.Core.ViewModel.Base;
 
-namespace MonkaS.Core.ViewModel.Chat
+namespace MonkaS.Core.ViewModel.Chat.ChatList
 {
     /// <summary>
     /// A view model for each chat list item in the overview chat list

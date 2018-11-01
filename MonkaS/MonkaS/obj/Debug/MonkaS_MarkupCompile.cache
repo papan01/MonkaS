@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\App.xaml
-14-1641470304
+172091814188
 
-28-14882131
+35-1237853837
 15-905645813
-Controls\Chat\ChatListControl.xaml;Controls\Chat\ChatListItemControl.xaml;Controls\PageHost.xaml;Controls\SideMenuControl.xaml;MainWindow.xaml;Pages\ChatPage.xaml;Pages\LoginPage.xaml;Pages\RegisterPage.xaml;Styles\Icons.xaml;Styles\PasswordBox.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;Styles\Colors.xaml;Styles\Buttons.xaml;
+Controls\Chat\ChatList\ChatListControl.xaml;Controls\Chat\ChatList\ChatListItemControl.xaml;Controls\Chat\ChatMessageList\ChatMessageListControl.xaml;Controls\Chat\ChatMessageList\ChatMessageListItemControl.xaml;Controls\PageHost.xaml;Controls\SideMenuControl.xaml;MainWindow.xaml;Pages\ChatPage.xaml;Pages\LoginPage.xaml;Pages\RegisterPage.xaml;Styles\Icons.xaml;Styles\PasswordBox.xaml;Styles\Scroll.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;Styles\Colors.xaml;Styles\Buttons.xaml;
 
 False
 

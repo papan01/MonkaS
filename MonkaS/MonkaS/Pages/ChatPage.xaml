@@ -4,14 +4,112 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MonkaS.Pages"
-      xmlns:vm="clr-namespace:MonkaS.Core.ViewModel;assembly=MonkaS.Core"         
+      xmlns:vm="clr-namespace:MonkaS.Core.ViewModel;assembly=MonkaS.Core"
+      xmlns:cml="clr-namespace:MonkaS.Controls.Chat.ChatMessageList"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ChatPage">
+      d:DesignHeight="450" d:DesignWidth="800" >
 
     <Grid>
-        <Border>
-            <TextBlock Text="Hello PEGATRON" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{StaticResource FontSizeXXLarge}" />
-        </Border>
+        <Grid.RowDefinitions>
+            <!-- Title bar -->
+            <RowDefinition Height="Auto" />
+            <!-- Chat List -->
+            <RowDefinition Height="*" />
+            <!-- Message Send Text box -->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Title bar -->
+        <Grid Height="50" Background="{StaticResource DarkBackgroundBrush}">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+
+            </Grid.ColumnDefinitions>
+
+            <!-- Title text -->
+            <TextBlock Text="Parnell" 
+                       Grid.ColumnSpan="2"                     
+                       Foreground="{StaticResource DarkForegroundBrush}"
+                       FontSize="{StaticResource FontSizeXLarge}"
+                       FontFamily="{StaticResource Lato-Regular}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       />
+
+            <!-- Main buttons -->
+            <StackPanel Orientation="Horizontal" Grid.Column="1">
+                <Button Style="{StaticResource IconGrowButton}" Content="{StaticResource FontAwesomeSearchIcon}" />
+                <Button Style="{StaticResource IconGrowButton}" Content="{StaticResource FontAwesomeEllipsisVerticalIcon}" />
+            </StackPanel>
+
+        </Grid>
+
+        <!-- Chat List -->
+        <cml:ChatMessageListControl Grid.Row="1"/>
+
+        <!-- Message Send Text box -->
+        <Grid Grid.Row="2" 
+              MinHeight="50"
+              MaxHeight="114"
+              Background="{StaticResource DarkBackgroundBrush}"
+              >
+
+            <Grid.ColumnDefinitions>
+                <!-- Attach button -->
+                <ColumnDefinition Width="Auto" />
+
+                <!-- Text entry box -->
+                <ColumnDefinition Width="*" />
+
+                <!-- Additional buttons -->
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Attach button -->
+            <Button Style="{StaticResource IconGrowButton}"
+                    Height="{Binding MinHeight, RelativeSource={RelativeSource AncestorType=Grid}}"
+                    Content="{StaticResource FontAwesomePaperclipIcon}"
+                    VerticalAlignment="Top"
+                    Foreground="{StaticResource DarkForegroundBrush}"
+                    />
+
+            <!-- Message box -->
+            <TextBox Grid.Column="1" 
+                     Tag="Write a message..."
+                     FontSize="{StaticResource FontSizeRegular}"
+                     VerticalAlignment="Center"
+                     BorderThickness="0"
+                     Padding="0 10"
+                     AcceptsReturn="True"
+                     AcceptsTab="True"
+                     VerticalScrollBarVisibility="Auto"
+                     />
+
+            <!-- Additional buttons -->
+            <StackPanel Grid.Column="2"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Top"
+                        Margin="0 0 8 0"
+                        >
+
+                <!-- Emoji button -->
+                <Button Style="{StaticResource IconGrowButton}"
+                    Height="{Binding MinHeight, RelativeSource={RelativeSource AncestorType=Grid}}"
+                    Content="{StaticResource FontAwesomeEmojiIcon}"
+                    Foreground="{StaticResource OrangeA700Brush}"
+                    />
+
+                <!-- Send button -->
+                <Button Content="Send"
+                        Padding="8"
+                        Background="{StaticResource GreenA700Brush}"
+                        FontSize="{StaticResource FontSizeRegular}"
+                        />
+
+            </StackPanel>
+
+        </Grid>
     </Grid>
 </local:BasePage>

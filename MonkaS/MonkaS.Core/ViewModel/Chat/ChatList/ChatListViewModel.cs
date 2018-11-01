@@ -1,7 +1,7 @@
 ﻿using MonkaS.Core.ViewModel.Base;
 using System.Collections.Generic;
 
-namespace MonkaS.Core.ViewModel.Chat
+namespace MonkaS.Core.ViewModel.Chat.ChatList
 {
     public class ChatListViewModel : ViewModelBase
     {

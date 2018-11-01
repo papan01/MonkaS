@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Frame x:Name="OldPage" ap:NoFrameHistory.Value="True" />
-        <Frame x:Name="NewPage" ap:NoFrameHistory.Value="True" />
+        <ContentControl x:Name="OldPage" />
+        <ContentControl x:Name="NewPage" />
     </Grid>
 </UserControl>

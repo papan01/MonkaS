@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MonkaS"
         xmlns:convert="clr-namespace:MonkaS.Converter"
         xmlns:control="clr-namespace:MonkaS.Controls"
-        xmlns:controlchat="clr-namespace:MonkaS.Controls.Chat"
+        xmlns:controlchatlist="clr-namespace:MonkaS.Controls.Chat.ChatList"
         xmlns:vm="clr-namespace:MonkaS.ViewModel"
         xmlns:ap="clr-namespace:MonkaS.AttachedProperties"
         mc:Ignorable="d"
@@ -136,12 +136,14 @@
             <Grid.Background>
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/Images/Backgrounds/emoji-background.png" />
             </Grid.Background>
-
+            
+            
+            
             <!-- Side Menu -->
             <control:SideMenuControl Grid.Column="0" Width="300" 
                                      ap:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.SideMenuVisible, 
                                      Source={x:Static vm:ViewModelLocator.Instance}}">
-                <controlchat:ChatListControl />
+                <controlchatlist:ChatListControl />
             </control:SideMenuControl>
 
             <control:PageHost 
