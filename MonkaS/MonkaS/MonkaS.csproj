@@ -69,6 +69,9 @@
     <Compile Include="AttachedProperties\NoFrameHistory.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
     <Compile Include="AttachedProperties\TextAttachedProperties.cs" />
+    <Compile Include="Controls\BubbleContent.xaml.cs">
+      <DependentUpon>BubbleContent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Chat\ChatList\ChatListControl.xaml.cs">
       <DependentUpon>ChatListControl.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,9 @@
     <Compile Include="Controls\Chat\ChatMessageList\ChatMessageListItemControl.xaml.cs">
       <DependentUpon>ChatMessageListItemControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Menu\VerticalMenu.xaml.cs">
+      <DependentUpon>VerticalMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PageHost.xaml.cs">
       <DependentUpon>PageHost.xaml</DependentUpon>
     </Compile>
@@ -90,14 +96,18 @@
     <Compile Include="Converter\ApplicationPageValueConverter.cs" />
     <Compile Include="Converter\BaseValueConverter.cs" />
     <Compile Include="Converter\BoolenToVisibilityConverter.cs" />
+    <Compile Include="Converter\HorizontalAlignmentConverter.cs" />
+    <Compile Include="Converter\IconTypeToFontAwesomeConverter.cs" />
+    <Compile Include="Converter\MenuItemTypeVisiblityConverter.cs" />
+    <Compile Include="Converter\PopupContentConverter.cs" />
     <Compile Include="Converter\SentByMeToAlignmentConverter.cs" />
     <Compile Include="Converter\SentByMeToBackgroundConverter.cs" />
     <Compile Include="Converter\StringRGBToBrushConverter.cs" />
     <Compile Include="Converter\TimeToDisplayTimeConverter.cs" />
     <Compile Include="Converter\TimeToReadTimeConverter.cs" />
     <Compile Include="Pages\BasePage.cs" />
-    <Compile Include="Pages\ChatPage.xaml.cs">
-      <DependentUpon>ChatPage.xaml</DependentUpon>
+    <Compile Include="Pages\ChatMessagePage.xaml.cs">
+      <DependentUpon>ChatMessagePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -108,6 +118,10 @@
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="Window\WindowResizer.cs" />
+    <Page Include="Controls\BubbleContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Chat\ChatList\ChatListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Chat\ChatMessageList\ChatMessageListItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Menu\VerticalMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,7 +162,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\ChatPage.xaml">
+    <Page Include="Pages\ChatMessagePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

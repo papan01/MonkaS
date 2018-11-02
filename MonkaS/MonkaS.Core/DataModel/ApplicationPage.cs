@@ -16,7 +16,7 @@
         Register = 1,
 
         /// <summary>
-        /// The main chat page
+        /// The main chat Message page
         /// </summary>
         Chat = 2,
     }

@@ -103,7 +103,6 @@ C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Chat\ChatMessageList\ChatMes
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\PageHost.g.cs
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\SideMenuControl.g.cs
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\MainWindow.g.cs
-C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Pages\ChatPage.g.cs
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Pages\LoginPage.g.cs
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Pages\RegisterPage.g.cs
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\App.g.cs
@@ -116,7 +115,6 @@ C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Chat\ChatMessageList\ChatMes
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Chat\ChatMessageList\ChatMessageListItemControl.baml
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\PageHost.baml
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\MainWindow.baml
-C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Pages\ChatPage.baml
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Pages\LoginPage.baml
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Pages\RegisterPage.baml
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Styles\PasswordBox.baml
@@ -129,3 +127,9 @@ C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\MonkaS.csproj.CopyComplete
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\MonkaS.exe
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\MonkaS.pdb
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Styles\Scroll.baml
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Pages\ChatMessagePage.g.cs
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Pages\ChatMessagePage.baml
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\BubbleContent.g.cs
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\BubbleContent.baml
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Menu\VerticalMenu.g.cs
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Menu\VerticalMenu.baml

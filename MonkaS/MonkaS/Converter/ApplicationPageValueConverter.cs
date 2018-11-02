@@ -23,7 +23,7 @@ namespace MonkaS.Converter
                     return new RegisterPage();
 
                 case ApplicationPage.Chat:
-                    return new ChatPage();
+                    return new ChatMessagePage();
 
                 default:
                     Debugger.Break();
