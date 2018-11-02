@@ -15,7 +15,6 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
         /// True to show the attachment menu, false to hide it
         /// </summary>
         private bool _AttachmentMenuVisible = false;
-
         #endregion
 
         #region Public Properties
@@ -30,8 +29,19 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
         public bool AttachmentMenuVisible
         {
             get => _AttachmentMenuVisible;
-            set => this.MutateVerbose(ref _AttachmentMenuVisible, value, RaisePropertyChanged());
+            set
+            {
+                this.MutateVerbose(ref _AttachmentMenuVisible, value, RaisePropertyChanged());
+                OnPropertyChanged(nameof(AnyPopupVisible));
+            }
+
         }
+
+        /// <summary>
+        /// True if any popup menus are visible
+        /// </summary>
+        public bool AnyPopupVisible => AttachmentMenuVisible;
+
 
         /// <summary>
         /// The view model for the attachment menu
@@ -41,7 +51,6 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
             get;
             set;
         }
-
         #endregion
 
         #region Public Commands
@@ -50,6 +59,11 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
         /// The command for when the attachment button is clicked
         /// </summary>
         public ICommand AttachmentButtonCommand { get; set; }
+
+        /// <summary>
+        /// The command for when the area outside of any popup is clicked
+        /// </summary>
+        public ICommand PopupClickawayCommand { get; set; }
 
         #endregion
 
@@ -62,6 +76,8 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
         {
             // Create commands
             AttachmentButtonCommand = new AnotherCommandImplementation(AttachmentButton);
+            PopupClickawayCommand = new AnotherCommandImplementation(PopupClickaway);
+
             // Make a default menu
             AttachmentMenu = new ChatAttachmentPopupMenuViewModel();
         }
@@ -76,6 +92,15 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
         {
             // Toggle menu visibility
             AttachmentMenuVisible ^= true;
+        }
+
+        /// <summary>
+        /// When the popup clickaway area is clicked hide any popups
+        /// </summary>
+        public void PopupClickaway(object sender)
+        {
+            // Hide attachment menu
+            AttachmentMenuVisible = false;
         }
         #endregion
     }
