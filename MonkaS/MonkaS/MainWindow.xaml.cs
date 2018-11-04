@@ -12,7 +12,7 @@ namespace MonkaS
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel(this);
+            DataContext = new WindowViewModel(this);
         }
     }
 }

@@ -131,6 +131,7 @@
                         Padding="8"
                         Background="{StaticResource GreenA700Brush}"
                         FontSize="{StaticResource FontSizeRegular}"
+                        Command="{Binding SendCommand}"
                         />
             </StackPanel>
         </Grid>

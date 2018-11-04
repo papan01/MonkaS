@@ -47,7 +47,6 @@ namespace MonkaS.Core.ViewModel
 
             // Show side menu or not?
             SideMenuVisible = page == ApplicationPage.Chat;
-
         }
     }
 }

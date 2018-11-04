@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\
 MonkaS
 none
 false
 DEBUG;TRACE
-C:\Louis\C#\MonkaS\MonkaS\MonkaS\App.xaml
-19-1482346878
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\App.xaml
+201743173420
 
-45130720299
-15-905645813
-Controls\BubbleContent.xaml;Controls\Chat\ChatList\ChatListControl.xaml;Controls\Chat\ChatList\ChatListItemControl.xaml;Controls\Chat\ChatMessageList\ChatMessageListControl.xaml;Controls\Chat\ChatMessageList\ChatMessageListItemControl.xaml;Controls\Menu\VerticalMenu.xaml;Controls\PageHost.xaml;Controls\SideMenuControl.xaml;MainWindow.xaml;Pages\ChatMessagePage.xaml;Pages\LoginPage.xaml;Pages\RegisterPage.xaml;Styles\Icons.xaml;Styles\PasswordBox.xaml;Styles\Scroll.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;Styles\Colors.xaml;Styles\Buttons.xaml;
+48-1018739985
+151435521830
+Controls\BubbleContent.xaml;Controls\Chat\ChatList\ChatListControl.xaml;Controls\Chat\ChatList\ChatListItemControl.xaml;Controls\Chat\ChatMessageList\ChatMessageListControl.xaml;Controls\Chat\ChatMessageList\ChatMessageListItemControl.xaml;Controls\Menu\VerticalMenu.xaml;Controls\PageHost.xaml;Controls\SideMenuControl.xaml;Dialogs\DialogWindow.xaml;MainWindow.xaml;Pages\ChatMessagePage.xaml;Pages\LoginPage.xaml;Pages\RegisterPage.xaml;Styles\Icons.xaml;Styles\PasswordBox.xaml;Styles\Scroll.xaml;Styles\Texts.xaml;Styles\Fonts.xaml;Styles\Colors.xaml;Styles\Buttons.xaml;
 
-True
+False
 

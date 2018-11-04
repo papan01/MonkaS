@@ -1,4 +1,5 @@
 ﻿using MonkaS.Core.ViewModel.Base;
+using MonkaS.Core.ViewModel.Dialogs;
 using MonkaS.Core.ViewModel.PopupMenu;
 using System.Collections.Generic;
 using System.Windows.Input;
@@ -65,6 +66,11 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
         /// </summary>
         public ICommand PopupClickawayCommand { get; set; }
 
+        /// <summary>
+        /// The command for when the user clicks the send button
+        /// </summary>
+        public ICommand SendCommand { get; set; }
+
         #endregion
 
         #region Constructor
@@ -77,6 +83,7 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
             // Create commands
             AttachmentButtonCommand = new AnotherCommandImplementation(AttachmentButton);
             PopupClickawayCommand = new AnotherCommandImplementation(PopupClickaway);
+            SendCommand = new AnotherCommandImplementation(Send);
 
             // Make a default menu
             AttachmentMenu = new ChatAttachmentPopupMenuViewModel();
@@ -102,6 +109,20 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
             // Hide attachment menu
             AttachmentMenuVisible = false;
         }
+
+        /// <summary>
+        /// When the user clicks the send button, sends the message
+        /// </summary>
+        public void Send(object sender)
+        {
+            IoC.IoC.UI.ShowMessage(new MessageBoxDialogViewModel
+            {
+                Title = "Send Message",
+                Message = "Thank you for writing a nice message :)",
+                OkText = "OK"
+            });
+        }
+
         #endregion
     }
 }
