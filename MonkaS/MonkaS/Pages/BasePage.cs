@@ -59,7 +59,7 @@ namespace MonkaS.Pages
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void BasePage_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        private async void BasePage_Loaded(object sender, RoutedEventArgs e)
         {
             // If we are setup to animate out on load
             if (ShouldAnimateOut)

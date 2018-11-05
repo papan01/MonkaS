@@ -1,7 +1,7 @@
 ﻿using MonkaS.Core.IoC.Interfaces;
 using MonkaS.Core.ViewModel.Dialogs;
+using MonkaS.Dialogs;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace MonkaS
 {
@@ -17,7 +17,7 @@ namespace MonkaS
         /// <returns></returns>
         public Task ShowMessage(MessageBoxDialogViewModel viewModel)
         {
-            return Task.Run(() => MessageBox.Show("TEST"));
+            return new DialogMessageBox().ShowDialog(viewModel);
         }
     }
 }

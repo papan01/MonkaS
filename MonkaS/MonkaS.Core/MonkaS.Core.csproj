@@ -59,6 +59,7 @@
     <Compile Include="ViewModel\ApplicationViewModel.cs" />
     <Compile Include="ViewModel\Base\AnotherCommandImplementation.cs" />
     <Compile Include="ViewModel\Base\NotifyPropertyChangedExtension.cs" />
+    <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\Base\ViewModelBase.cs" />
     <Compile Include="ViewModel\Chat\ChatList\ChatListItemViewModel.cs" />
     <Compile Include="ViewModel\Chat\ChatList\ChatListViewModel.cs" />

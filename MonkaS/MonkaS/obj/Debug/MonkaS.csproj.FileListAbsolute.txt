@@ -152,3 +152,7 @@ C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Styles\Scroll.baml
 C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\MonkaS.csproj.CopyComplete
 C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogWindow.g.cs
 C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogWindow.baml
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogWindow.g.cs
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogWindow.baml
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogMessageBox.g.cs
+C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogMessageBox.baml
