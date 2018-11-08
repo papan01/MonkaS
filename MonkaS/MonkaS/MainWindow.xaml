@@ -15,6 +15,8 @@
         WindowStartupLocation="CenterScreen"
         MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
+        Deactivated="AppWindow_Deactivated"
+        Activated="AppWindow_Activated"
         Title="MonkaS" Height="720" Width="1280" >
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
@@ -147,9 +149,16 @@
             <Grid.Background>
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/Images/Backgrounds/emoji-background.png" />
             </Grid.Background>
-            
-            
-            
+
+            <!-- Dimmed overlay -->
+            <Border Grid.ColumnSpan="2"
+                    Panel.ZIndex="10"
+                    Opacity="0.3">
+                <Border Background="{StaticResource Gray900Brush}"
+                        ap:AnimateFadeInProperty.Value="{Binding DimmableOverlayVisible}"
+                        />
+            </Border>
+
             <!-- Side Menu -->
             <control:SideMenuControl Grid.Column="0" Width="300" 
                                      ap:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.SideMenuVisible, 

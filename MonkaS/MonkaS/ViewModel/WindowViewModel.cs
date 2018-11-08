@@ -26,6 +26,12 @@ namespace MonkaS.ViewModel
         /// The last known dock position
         /// </summary>
         private WindowDockPosition _DockPosition = WindowDockPosition.Undocked;
+
+        /// <summary>
+        /// True if we should have a dimmed overlay on the window
+        /// such as when a popup is visible or the window is not focused
+        /// </summary>
+        private bool _DimmableOverlayVisible;
         #endregion
 
         #region Public Properties
@@ -121,6 +127,15 @@ namespace MonkaS.ViewModel
         /// </summary>
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
 
+        /// <summary>
+        /// True if we should have a dimmed overlay on the window
+        /// such as when a popup is visible or the window is not focused
+        /// </summary>
+        public bool DimmableOverlayVisible
+        {
+            get => _DimmableOverlayVisible;
+            set => this.MutateVerbose(ref _DimmableOverlayVisible, value, RaisePropertyChanged());
+        }
         #endregion
 
         #region Commands
