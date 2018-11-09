@@ -6,6 +6,7 @@ FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Controls\Chat\ChatList\ChatListItemControl.xam
 FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Controls\Chat\ChatMessageList\ChatMessageListControl.xaml;;
 FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Controls\Chat\ChatMessageList\ChatMessageListItemControl.xaml;;
 FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Controls\Menu\VerticalMenu.xaml;;
+FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Controls\SideMenuControl.xaml;;
 FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Dialogs\DialogMessageBox.xaml;;
 FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Dialogs\DialogWindow.xaml;;
 FC:\Louis\C#\MonkaS\MonkaS\MonkaS\MainWindow.xaml;;
@@ -15,4 +16,5 @@ FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Pages\RegisterPage.xaml;;
 FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Styles\PasswordBox.xaml;;
 FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Styles\Scroll.xaml;;
 FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Styles\Buttons.xaml;;
+FC:\Louis\C#\MonkaS\MonkaS\MonkaS\Controls\SettingsControl.xaml;;
 

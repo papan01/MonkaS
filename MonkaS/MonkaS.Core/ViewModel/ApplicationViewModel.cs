@@ -14,9 +14,16 @@ namespace MonkaS.Core.ViewModel
         /// </summary>
         private ApplicationPage _CurrentPage = ApplicationPage.Login;
 
+        /// <summary>
+        /// True if the side menu should be shown
+        /// </summary>
         private bool _SideMenuVisible = false;
-        #endregion
 
+        /// <summary>
+        /// True if the settings menu should be shown
+        /// </summary>
+        private bool _SettingsMenuVisible = false;
+        #endregion
         /// <summary>
         /// The current page of the application
         /// </summary>
@@ -35,6 +42,14 @@ namespace MonkaS.Core.ViewModel
             set => this.MutateVerbose(ref _SideMenuVisible, value, RaisePropertyChanged());
         }
 
+        /// <summary>
+        /// True if the settings menu should be shown
+        /// </summary>
+        public bool SettingsMenuVisible
+        {
+            get => _SettingsMenuVisible;
+            set => this.MutateVerbose(ref _SettingsMenuVisible, value, RaisePropertyChanged());
+        }
 
         /// <summary>
         /// Navigates to the specified page

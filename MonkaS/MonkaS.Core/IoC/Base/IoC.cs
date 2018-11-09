@@ -20,6 +20,16 @@ namespace MonkaS.Core.IoC
         /// A shortcut to access the <see cref="IUIManager"/>
         /// </summary>
         public static IUIManager UI => Get<IUIManager>();
+
+        /// <summary>
+        /// A shortcut to access the <see cref="ApplicationViewModel"/>
+        /// </summary>
+        public static ApplicationViewModel Application => Get<ApplicationViewModel>();
+
+        /// <summary>
+        /// A shortcut to access the <see cref="SettingsViewModel"/>
+        /// </summary>
+        public static SettingsViewModel Settings => Get<SettingsViewModel>();
         #endregion
 
         #region Construction
@@ -42,6 +52,8 @@ namespace MonkaS.Core.IoC
         {
             // Bind to a single instance of Application view model
             Kernel.Bind<ApplicationViewModel>().ToConstant(new ApplicationViewModel());
+            // Bind to a single instance of Settings view model
+            Kernel.Bind<SettingsViewModel>().ToConstant(new SettingsViewModel());
         }
 
         #endregion

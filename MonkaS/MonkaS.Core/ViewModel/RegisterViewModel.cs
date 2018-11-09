@@ -87,7 +87,7 @@ namespace MonkaS.Core.ViewModel
         public async Task LoginAsync(object parameter)
         {
             // Go to register page?
-            IoC.IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Login);
+            IoC.IoC.Application.GoToPage(ApplicationPage.Login);
             await Task.Delay(1);
         }
     }

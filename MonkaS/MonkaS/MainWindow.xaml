@@ -150,6 +150,12 @@
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/Images/Backgrounds/emoji-background.png" />
             </Grid.Background>
 
+            <!-- Settings page -->
+            <control:SettingsControl Grid.ColumnSpan="2"
+                                   Panel.ZIndex="9"
+                                   ap:AnimateSlideInFromBottomMarginProperty.Value="{Binding ApplicationViewModel.SettingsMenuVisible, Source={x:Static vm:ViewModelLocator.Instance}}"
+                                   />
+
             <!-- Dimmed overlay -->
             <Border Grid.ColumnSpan="2"
                     Panel.ZIndex="10"

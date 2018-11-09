@@ -72,7 +72,7 @@ namespace MonkaS.Core.ViewModel
                 await Task.Delay(2000);
 
                 // Go to chat page
-                IoC.IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Chat);
+                IoC.IoC.Application.GoToPage(ApplicationPage.Chat);
 
                 //var email = Email;
 
@@ -89,7 +89,7 @@ namespace MonkaS.Core.ViewModel
         public async Task RegisterAsync(object parameter)
         {
             // Go to register page?
-            IoC.IoC.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Register);
+            IoC.IoC.Application.GoToPage(ApplicationPage.Register);
             await Task.Delay(1);
         }
     }
