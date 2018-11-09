@@ -86,7 +86,7 @@ namespace MonkaS.Pages
                 case PageAnimation.SlideAndFadeInFromRight:
 
                     // Start the animation
-                    await this.SlideAndFadeInFromRightAsync(seconds: SlideSeconds, width: (int)Application.Current.MainWindow.Width);
+                    await this.SlideAndFadeInAsync(AnimationSlideDirection.Right, false, SlideSeconds, size: (int)Application.Current.MainWindow.Width);
                     break;
             }
         }
@@ -106,7 +106,7 @@ namespace MonkaS.Pages
                 case PageAnimation.SlideAndFadeOutToLeft:
 
                     // Start the animation
-                    await this.SlideAndFadeOutToLeftAsync(SlideSeconds, width: (int)Application.Current.MainWindow.Width);
+                    await this.SlideAndFadeOutAsync(AnimationSlideDirection.Left, SlideSeconds);
 
                     break;
             }
