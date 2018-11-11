@@ -1,5 +1,5 @@
 ﻿using MonkaS.Core.IoC;
-using MonkaS.Core.ViewModel;
+using MonkaS.Core.ViewModel.Application;
 
 namespace MonkaS.ViewModel
 {

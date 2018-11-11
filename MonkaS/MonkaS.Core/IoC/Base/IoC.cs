@@ -1,5 +1,5 @@
 ﻿using MonkaS.Core.IoC.Interfaces;
-using MonkaS.Core.ViewModel;
+using MonkaS.Core.ViewModel.Application;
 using Ninject;
 
 namespace MonkaS.Core.IoC

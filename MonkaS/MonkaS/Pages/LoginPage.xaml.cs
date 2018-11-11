@@ -1,5 +1,5 @@
 ﻿using MonkaS.Core.Security;
-using MonkaS.Core.ViewModel;
+using MonkaS.Core.ViewModel.Application;
 using System.Security;
 
 namespace MonkaS.Pages

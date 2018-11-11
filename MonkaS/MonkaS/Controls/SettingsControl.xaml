@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ap="clr-namespace:MonkaS.AttachedProperties"
+             xmlns:input="clr-namespace:MonkaS.Controls.Input"
              mc:Ignorable="d" >
     <Border Background="{StaticResource DarkBackgroundBrush}" 
             Padding="15">
@@ -72,35 +73,12 @@
                 </Grid>
 
                 <!-- Profile details -->
-                <Grid Grid.Column="1" 
-                      ap:PanelChildMarginProperty.Value="15 8">
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-
-                    <!-- Labels -->
-                    <TextBlock Text="Name" FontFamily="{StaticResource Lato-Regular}" Foreground="{StaticResource DarkForegroundBrush}" />
-                    <TextBlock Text="Username" Grid.Row="1" FontFamily="{StaticResource Lato-Regular}" Foreground="{StaticResource DarkForegroundBrush}" />
-                    <TextBlock Text="Password" Grid.Row="2" FontFamily="{StaticResource Lato-Regular}" Foreground="{StaticResource DarkForegroundBrush}" />
-                    <TextBlock Text="Email" Grid.Row="3" FontFamily="{StaticResource Lato-Regular}" Foreground="{StaticResource DarkForegroundBrush}" />
-
-                    <!-- Content -->
-                    <TextBlock Text="Luke Malpass" Grid.Column="1" FontFamily="{StaticResource Lato-Regular}" Foreground="{StaticResource DarkForegroundBrush}"/>
-                    <TextBlock Text="luke" Grid.Column="1" Grid.Row="1" FontFamily="{StaticResource Lato-Regular}" Foreground="{StaticResource DarkForegroundBrush}"/>
-                    <TextBlock Text="********" Grid.Column="1" Grid.Row="2" FontFamily="{StaticResource Lato-Regular}" Foreground="{StaticResource DarkForegroundBrush}"/>
-                    <TextBlock Text="contact@angelsix.com" Grid.Column="1" Grid.Row="3" FontFamily="{StaticResource Lato-Regular}" Foreground="{StaticResource DarkForegroundBrush}"/>
-                </Grid>
+                <StackPanel Grid.Column="1">
+                    <input:TextEntryControl />
+                    <input:TextEntryControl />
+                    <input:TextEntryControl />
+                    <input:TextEntryControl />
+                </StackPanel>
             </Grid>
         </Grid>
     </Border>

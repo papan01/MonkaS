@@ -158,3 +158,9 @@ C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogMessageBox.g.cs
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogMessageBox.baml
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\SettingsControl.baml
 C:\Louis\C#\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\SettingsControl.g.cs
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\SettingsControl.g.cs
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogMessageBox.g.cs
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\SettingsControl.baml
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogMessageBox.baml
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Input\TextEntryControl.g.cs
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Input\TextEntryControl.baml
