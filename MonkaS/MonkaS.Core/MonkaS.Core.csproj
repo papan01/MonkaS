@@ -57,6 +57,7 @@
     <Compile Include="Security\IHavePassword.cs" />
     <Compile Include="Security\SecureStringHelpers.cs" />
     <Compile Include="ViewModel\Application\ApplicationViewModel.cs" />
+    <Compile Include="ViewModel\Application\Design\SettingsDesignModel.cs" />
     <Compile Include="ViewModel\Base\AnotherCommandImplementation.cs" />
     <Compile Include="ViewModel\Base\NotifyPropertyChangedExtension.cs" />
     <Compile Include="ViewModel\Base\RelayCommand.cs" />

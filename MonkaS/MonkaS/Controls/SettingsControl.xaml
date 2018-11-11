@@ -5,6 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ap="clr-namespace:MonkaS.AttachedProperties"
              xmlns:input="clr-namespace:MonkaS.Controls.Input"
+             xmlns:vmd="clr-namespace:MonkaS.Core.ViewModel.Application.Design;assembly=MonkaS.Core"
+             d:DataContext="{x:Static vmd:SettingsDesignModel.Instance}"             
              mc:Ignorable="d" >
     <Border Background="{StaticResource DarkBackgroundBrush}" 
             Padding="15">
@@ -73,11 +75,12 @@
                 </Grid>
 
                 <!-- Profile details -->
-                <StackPanel Grid.Column="1">
-                    <input:TextEntryControl />
-                    <input:TextEntryControl />
-                    <input:TextEntryControl />
-                    <input:TextEntryControl />
+                <StackPanel Grid.Column="1"
+                            ap:TextEntryWidthMatcherProperty.Value="True">
+                    <input:TextEntryControl DataContext="{Binding Name}"/>
+                    <input:TextEntryControl DataContext="{Binding Username}"/>
+                    <input:TextEntryControl DataContext="{Binding Password}"/>
+                    <input:TextEntryControl DataContext="{Binding Email}"/>
                 </StackPanel>
             </Grid>
         </Grid>

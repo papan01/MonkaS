@@ -93,6 +93,11 @@ namespace MonkaS.Core.ViewModel.Application
             // Create commands
             OpenCommand = new RelayCommand(Open);
             CloseCommand = new RelayCommand(Close);
+
+            Name = new TextEntryViewModel { Label = "Name", OriginalText = "Louis N" };
+            Username = new TextEntryViewModel { Label = "Username", OriginalText = "N" };
+            Password = new TextEntryViewModel { Label = "Password", OriginalText = "********" };
+            Email = new TextEntryViewModel { Label = "Email", OriginalText = "navy90517@gmail.com" };
         }
 
         #endregion
