@@ -25,7 +25,7 @@ namespace MonkaS.Core.ViewModel.Application.Design
         {
             Name = new TextEntryViewModel { Label = "Name", OriginalText = "Louis Peng" };
             Username = new TextEntryViewModel { Label = "Username", OriginalText = "Louis" };
-            Password = new TextEntryViewModel { Label = "Password", OriginalText = "********" };
+            Password = new PasswordEntryViewModel { Label = "Password", FakePassword = "********" };
             Email = new TextEntryViewModel { Label = "Email", OriginalText = "navy90517@gmail.com" };
         }
 

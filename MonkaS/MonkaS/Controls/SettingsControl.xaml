@@ -79,8 +79,12 @@
                             ap:TextEntryWidthMatcherProperty.Value="True">
                     <input:TextEntryControl DataContext="{Binding Name}"/>
                     <input:TextEntryControl DataContext="{Binding Username}"/>
-                    <input:TextEntryControl DataContext="{Binding Password}"/>
+                    <input:PasswordEntryControl DataContext="{Binding Password}"/>
                     <input:TextEntryControl DataContext="{Binding Email}"/>
+
+                    <Button Content="{Binding LogoutButtonText}"
+                            Command="{Binding LogoutCommand}"
+                            FontSize="{StaticResource FontSizeRegular}"/>
                 </StackPanel>
             </Grid>
         </Grid>

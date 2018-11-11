@@ -44,19 +44,31 @@ namespace MonkaS.AttachedProperties
     public class FocusAndSelectProperty : BaseAttachedProperty<FocusAndSelectProperty, bool>
     {
         public override void OnValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
-        {
-            // If we don't have a control, return
-            if (!(sender is TextBoxBase control))
-                return;
-
-            if ((bool)e.NewValue)
+        {         
+            if (sender is TextBoxBase textbox)
             {
-                // Focus this control
-                control.Focus();
+                if ((bool)e.NewValue)
+                {
+                    // Focus this control
+                    textbox.Focus();
 
-                // Select all text
-                control.SelectAll();
+                    // Select all text
+                    textbox.SelectAll();
+                }
             }
+
+            if (sender is PasswordBox passwordbox)
+            {
+                if ((bool)e.NewValue)
+                {
+                    // Focus this control
+                    passwordbox.Focus();
+
+                    // Select all text
+                    passwordbox.SelectAll();
+                }
+            }
+
         }
     }
 }

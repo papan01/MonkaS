@@ -1,5 +1,7 @@
 ﻿using MonkaS.Core.DataModel;
 using MonkaS.Core.ViewModel.Base;
+using MonkaS.Core.ViewModel.Input;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -68,8 +70,17 @@ namespace MonkaS.Core.ViewModel.Application
         {
             await RunCommand(() => LoginIsRunning, async () =>
             {
-                await Task.Delay(2000);
+                // TODO: Fake a login...
+                await Task.Delay(1000);
 
+                // OK successfully logged in... now get users data
+                // TODO: Ask server for users info
+
+                // TODO: Remove this with real information pulled from our database in future
+                IoC.IoC.Settings.Name = new TextEntryViewModel { Label = "Name", OriginalText = $"Louis Real {DateTime.Now.ToLocalTime()}" };
+                IoC.IoC.Settings.Username = new TextEntryViewModel { Label = "Username", OriginalText = "-N-" };
+                IoC.IoC.Settings.Password = new PasswordEntryViewModel { Label = "Password", FakePassword = "********" };
+                IoC.IoC.Settings.Email = new TextEntryViewModel { Label = "Email", OriginalText = "navy90517@gmail.com" };
                 // Go to chat page
                 IoC.IoC.Application.GoToPage(ApplicationPage.Chat);
 

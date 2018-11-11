@@ -164,3 +164,5 @@ C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\SettingsControl.ba
 C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Dialogs\DialogMessageBox.baml
 C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Input\TextEntryControl.g.cs
 C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Input\TextEntryControl.baml
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Input\PasswordEntryControl.g.cs
+C:\Users\user\Desktop\MonkaS\MonkaS\MonkaS\obj\Debug\Controls\Input\PasswordEntryControl.baml

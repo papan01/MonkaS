@@ -18,6 +18,7 @@
                 FontSize="{StaticResource FontSizeRegular}"
                 Command="{Binding CloseCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type base:BaseDialogUserControl}}}"
                 HorizontalAlignment="Center"
+                IsDefault="True"
                 />
 
     </StackPanel>

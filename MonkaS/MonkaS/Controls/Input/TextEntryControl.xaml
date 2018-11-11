@@ -78,6 +78,7 @@
                        FontFamily="{StaticResource Lato-Regular}"
                        Margin="15 8"
                        VerticalAlignment="Center"
+                       ToolTip="{Binding OriginalText}"
                        />
 
             <!-- Edit button container -->

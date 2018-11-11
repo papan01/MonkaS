@@ -14,7 +14,7 @@
         /// <summary>
         /// The text to use for the OK button
         /// </summary>
-        private string _OkText;
+        private string _OkText = "OK";
         #endregion
 
         #region Public Properties
