@@ -105,7 +105,6 @@
                 </DataTrigger.ExitActions>
             </DataTrigger>
         </Style.Triggers>
-
     </Style>
 
 </ResourceDictionary>

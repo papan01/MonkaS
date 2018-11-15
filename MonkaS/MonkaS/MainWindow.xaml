@@ -173,12 +173,12 @@
             </control:SideMenuControl>
 
             <control:PageHost 
-                   Grid.Column="1" 
-                   d:DataContext=""
-                   DataContext="{Binding ApplicationViewModel.CurrentPage, 
-                                     Source={x:Static vm:ViewModelLocator.Instance},  
-                                     Converter={convert:ApplicationPageValueConverter}}" 
-                                     CurrentPage="{Binding}" />
+                   Grid.Column="1"
+                   CurrentPage="{Binding ApplicationViewModel.CurrentPage,
+                                        Source={x:Static vm:ViewModelLocator.Instance}}"
+                   CurrentPageViewModel="{Binding ApplicationViewModel.CurrentPageViewModel,
+                                        Source={x:Static vm:ViewModelLocator.Instance}}" 
+                   />
         </Grid>
     </Border>
 </Window>

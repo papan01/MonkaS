@@ -70,6 +70,7 @@
     <Compile Include="AttachedProperties\NoFrameHistory.cs" />
     <Compile Include="AttachedProperties\PanelChildMarginProperty.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
+    <Compile Include="AttachedProperties\ScrollToBottomOnLoadProperty.cs" />
     <Compile Include="AttachedProperties\TextAttachedProperties.cs" />
     <Compile Include="AttachedProperties\TextEntryWidthMatcherProperty.cs" />
     <Compile Include="Controls\BubbleContent.xaml.cs">
@@ -105,7 +106,7 @@
     <Compile Include="Controls\SideMenuControl.xaml.cs">
       <DependentUpon>SideMenuControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converter\ApplicationPageValueConverter.cs" />
+    <Compile Include="Converter\ApplicationPageHelpers.cs" />
     <Compile Include="Converter\BaseValueConverter.cs" />
     <Compile Include="Converter\BooleanInvertConverter.cs" />
     <Compile Include="Converter\BoolenToVisibilityConverter.cs" />

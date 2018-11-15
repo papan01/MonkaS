@@ -43,7 +43,6 @@ namespace MonkaS.Core.ViewModel.Chat.ChatList.Design
                     Initials = "PL",
                     Message = "The new server is up, got 192.168.1.1",
                     ProfilePictureRGB = "00d405",
-                    IsSelected = true
                 },
                 new ChatListItemViewModel
                 {

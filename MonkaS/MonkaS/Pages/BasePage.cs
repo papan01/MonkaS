@@ -1,4 +1,5 @@
 ﻿using MonkaS.Animation;
+using MonkaS.Core.IoC;
 using MonkaS.Core.ViewModel.Base;
 using System.ComponentModel;
 using System.Threading.Tasks;
@@ -10,6 +11,15 @@ namespace MonkaS.Pages
 {
     public class BasePage : UserControl
     {
+        #region Private Member
+
+        /// <summary>
+        /// The View Model associated with this page
+        /// </summary>
+        private object mViewModel;
+
+        #endregion
+
         #region Public Properties
         /// <summary>
         /// The animation the play when the page is first loaded
@@ -31,6 +41,29 @@ namespace MonkaS.Pages
         /// Useful for when we are moving the page to another frame
         /// </summary>
         public bool ShouldAnimateOut { get; set; }
+
+        /// <summary>
+        /// The View Model associated with this page
+        /// </summary>
+        public object ViewModelObject
+        {
+            get => mViewModel;
+            set
+            {
+                // If nothing has changed, return
+                if (mViewModel == value)
+                    return;
+
+                // Update the value
+                mViewModel = value;
+
+                // Fire the view model changed method
+                OnViewModelChanged();
+
+                // Set the data context for this page
+                DataContext = mViewModel;
+            }
+        }
         #endregion
 
         #region Constructor
@@ -45,7 +78,7 @@ namespace MonkaS.Pages
 
             // If we are animating in, hide to begin with
             if (PageLoadAnimation != PageAnimation.None)
-                Visibility = System.Windows.Visibility.Collapsed;
+                Visibility = Visibility.Collapsed;
 
             // Listen out for the page loading
             Loaded += BasePage_Loaded;
@@ -113,9 +146,15 @@ namespace MonkaS.Pages
         }
 
         #endregion
+
+        /// <summary>
+        /// Fired when the view model changes
+        /// </summary>
+        protected virtual void OnViewModelChanged()
+        {
+
+        }
     }
-
-
 
     /// <summary>
     /// A base page for all pages to gain base functionality
@@ -123,30 +162,14 @@ namespace MonkaS.Pages
     public class BasePage<ReferViewModel> : BasePage
         where ReferViewModel : ViewModelBase, new()
     {
-        #region Private Member
-        /// <summary>
-        /// The View Model associated with this page
-        /// </summary>
-        private ReferViewModel _ViewModel;
-        #endregion
-
         #region Public Properties
         /// <summary>
         /// The View Model associated with this page
         /// </summary>
         public ReferViewModel ViewModel
         {
-            get { return _ViewModel; }
-            set
-            {
-                // If nothing has changed, return
-                if (_ViewModel == value)
-                    return;
-
-                _ViewModel = value;
-                // Set the data context for this page
-                DataContext = _ViewModel;
-            }
+            get => (ReferViewModel)ViewModelObject;
+            set => ViewModelObject = value;
         }
         #endregion
 
@@ -156,10 +179,24 @@ namespace MonkaS.Pages
         /// </summary>
         public BasePage() : base()
         {
-            ViewModel = new ReferViewModel();
+            ViewModel = IoC.Get<ReferViewModel>();
+        }
+
+        /// <summary>
+        /// Constructor with specific view model
+        /// </summary>
+        /// <param name="specificViewModel">The specific view model to use, if any</param>
+        public BasePage(ReferViewModel specificViewModel = null) : base()
+        {
+            // Set specific view model
+            if (specificViewModel != null)
+                ViewModel = specificViewModel;
+            else
+                // Create a default view model
+                ViewModel = IoC.Get<ReferViewModel>();
         }
         #endregion
 
-  
+
     }
 }
