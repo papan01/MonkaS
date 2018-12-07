@@ -2,7 +2,7 @@
 using MonkaS.Core.ViewModel.Base;
 using MonkaS.Core.ViewModel.Chat.ChatMessageList;
 using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.Windows.Input;
 
 namespace MonkaS.Core.ViewModel.Chat.ChatList
@@ -130,7 +130,7 @@ namespace MonkaS.Core.ViewModel.Chat.ChatList
         {        
             IoC.IoC.Application.GoToPage(ApplicationPage.Chat, new ChatMessageListViewModel
             {
-                Items = new ObservableCollection<ChatMessageListItemViewModel>
+                Items = new List<ChatMessageListItemViewModel>
                 {
                      new ChatMessageListItemViewModel
                     {

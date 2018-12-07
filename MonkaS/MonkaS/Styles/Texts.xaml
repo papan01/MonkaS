@@ -51,7 +51,9 @@
                                     </Style.Triggers>
                                 </Style>
                             </TextBlock.Style>
+
                         </TextBlock>
+
                     </Grid>
 
                     <ControlTemplate.Triggers>

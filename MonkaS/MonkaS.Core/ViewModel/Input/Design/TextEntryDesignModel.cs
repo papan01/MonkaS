@@ -22,7 +22,7 @@
         public TextEntryDesignModel()
         {
             Label = "Name";
-            OriginalText = "Louis Peng";
+            OriginalText = "Luke Malpass";
             EditedText = "Editing :)";
         }
 
