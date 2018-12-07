@@ -107,6 +107,10 @@ namespace MonkaS.Dialogs.Base
                     // Setup this controls data context binding to the view model
                     DataContext = viewModel;
 
+                    // Show in the center of the parent
+                    mDialogWindow.Owner = Application.Current.MainWindow;
+                    mDialogWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+
                     // Show dialog
                     mDialogWindow.ShowDialog();
                 }

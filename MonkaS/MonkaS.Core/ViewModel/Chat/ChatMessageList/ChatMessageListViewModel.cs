@@ -1,7 +1,7 @@
 ﻿using MonkaS.Core.ViewModel.Base;
-using MonkaS.Core.ViewModel.Dialogs;
 using MonkaS.Core.ViewModel.PopupMenu;
-using System.Collections.Generic;
+using System;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
@@ -16,13 +16,19 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
         /// True to show the attachment menu, false to hide it
         /// </summary>
         private bool _AttachmentMenuVisible = false;
+
+
+        /// <summary>
+        /// The text for the current message being written
+        /// </summary>
+        private string _PendingMessageText;
         #endregion
 
         #region Public Properties
         /// <summary>
         /// The chat thread items for the list
         /// </summary>
-        public List<ChatMessageListItemViewModel> Items { get; set; }
+        public ObservableCollection<ChatMessageListItemViewModel> Items { get; set; }
 
         /// <summary>
         /// True to show the attachment menu, false to hide it
@@ -51,6 +57,15 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// The text for the current message being written
+        /// </summary>
+        public string PendingMessageText
+        {
+            get => _PendingMessageText;
+            set => this.MutateVerbose(ref _PendingMessageText, value, RaisePropertyChanged());
         }
         #endregion
 
@@ -83,7 +98,7 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
             // Create commands
             AttachmentButtonCommand = new AnotherCommandImplementation(AttachmentButton);
             PopupClickawayCommand = new AnotherCommandImplementation(PopupClickaway);
-            SendCommand = new AnotherCommandImplementation(Send);
+            SendCommand = new RelayCommand(Send);
 
             // Make a default menu
             AttachmentMenu = new ChatAttachmentPopupMenuViewModel();
@@ -113,14 +128,25 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList
         /// <summary>
         /// When the user clicks the send button, sends the message
         /// </summary>
-        public void Send(object sender)
+        public void Send()
         {
-            IoC.IoC.UI.ShowMessage(new MessageBoxDialogViewModel
+            if (Items == null)
+                Items = new ObservableCollection<ChatMessageListItemViewModel>();
+
+            // Fake send a new message
+            Items.Add(new ChatMessageListItemViewModel
             {
-                Title = "Send Message",
-                Message = "Thank you for writing a nice message :)",
-                OkText = "OK"
+                Initials = "LM",
+                Message = PendingMessageText,
+                MessageSentTime = DateTime.UtcNow,
+                ProfilePictureRGB = "FF0000",
+                SentByMe = true,
+                SenderName = "Luke Malpass",
+                NewItem = true
             });
+
+            // Clear the pending message text
+            PendingMessageText = string.Empty;
         }
 
         #endregion

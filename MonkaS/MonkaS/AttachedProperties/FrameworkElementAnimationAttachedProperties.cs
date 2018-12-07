@@ -45,9 +45,7 @@ namespace MonkaS.AttachedProperties
                 mAlreadyLoaded[sender] = false;
 
                 // Start off hidden before we decide how to animate
-                // if we are to be animated out initially
-                if (!(bool)value)
-                    element.Visibility = Visibility.Hidden;
+                element.Visibility = Visibility.Hidden;
 
                 // Create a single self-unhookable event 
                 // for the elements Loaded event
@@ -135,6 +133,19 @@ namespace MonkaS.AttachedProperties
             else
                 // Animate out
                 await element.SlideAndFadeOutAsync(AnimationSlideDirection.Bottom, firstLoad ? 0 : 0.3f, keepMargin: true);
+        }
+    }
+
+    /// <summary>
+    /// Animates a framework element sliding up from the bottom on load
+    /// if the value is true
+    /// </summary>
+    public class AnimateSlideInFromBottomOnLoadProperty : AnimateBaseProperty<AnimateSlideInFromBottomOnLoadProperty>
+    {
+        protected override async void DoAnimation(FrameworkElement element, bool value, bool firstLoad)
+        {
+            // Animate in
+            await element.SlideAndFadeInAsync(AnimationSlideDirection.Bottom, !value, !value ? 0 : 0.3f, keepMargin: false);
         }
     }
 

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace MonkaS.Core.ViewModel.Chat.ChatMessageList.Design
 {
@@ -24,7 +24,7 @@ namespace MonkaS.Core.ViewModel.Chat.ChatMessageList.Design
         /// </summary>
         public ChatMessageListDesignModel()
         {
-            Items = new List<ChatMessageListItemViewModel>
+            Items = new ObservableCollection<ChatMessageListItemViewModel>
             {
                 new ChatMessageListItemViewModel
                 {

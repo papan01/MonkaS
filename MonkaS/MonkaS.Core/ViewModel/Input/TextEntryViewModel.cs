@@ -33,7 +33,6 @@ namespace MonkaS.Core.ViewModel.Input
 
         #endregion
 
-
         #region Public Properties
 
         /// <summary>
